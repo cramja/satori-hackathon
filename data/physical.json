@@ -1,0 +1,42 @@
+{
+    "executiontime": 0.003885030746459961,
+    "status": "success",
+    "message": "",
+    "version": "1.0.0",
+    "result": {
+        "spouts": {
+            "sentence": {
+                "spout_type": "default",
+                "outputs": [{
+                    "stream_name": "default"
+                }],
+                "spout_source": "NA"
+            }
+        },
+        "stages": 2,
+        "bolts": {
+            "count": {
+                "outputs": [{
+                    "stream_name": "default"
+                }],
+                "inputs": [{
+                    "stream_name": "default",
+                    "component_name": "split",
+                    "grouping": "FIELDS"
+                }],
+                "inputComponents": ["split"]
+            },
+            "split": {
+                "outputs": [{
+                    "stream_name": "default"
+                }],
+                "inputs": [{
+                    "stream_name": "default",
+                    "component_name": "sentence",
+                    "grouping": "SHUFFLE"
+                }],
+                "inputComponents": ["sentence"]
+            }
+        }
+    }
+}

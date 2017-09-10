@@ -57,3 +57,12 @@ typings/
 
 # dotenv environment variables file
 .env
+
+.gradle/
+.idea/
+order-streambot/.gradle/
+order-streambot/build/
+order-streambot/log/
+location-streambot/.gradle/
+location-streambot/build/
+location-streambot/log/
